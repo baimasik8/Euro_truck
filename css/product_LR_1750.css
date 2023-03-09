@@ -1,0 +1,368 @@
+
+div.nav .container ul li:first-of-type a.nav-link {
+    color: #181818;
+    
+}
+
+div.nav .container ul li:first-of-type a.nav-link::after {
+    display: block; /*превращаем его в блочный элемент*/
+    content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+    height: 3px; /*задаём высоту линии*/
+    width: 0%; /*задаём начальную ширину элемента (линии)*/
+    background-color: #FCB427; /*цвет фона элемента*/
+    -webkit-transition: width 0.4s ease-in-out;
+    -o-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+    width: 100%;
+}
+
+
+div.breadcrumb {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 15px;
+}
+div.breadcrumb div.container {
+    padding: 0 1em;
+}
+div.breadcrumb div.bx-breadcrumb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+}
+
+div.breadcrumb div.bx-breadcrumb a {
+    text-decoration: none;
+    color: #181818;
+}
+
+div.breadcrumb div.bx-breadcrumb span {
+    color: #828282;
+    cursor: default;
+}
+
+div.product {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background-image: url(../images/BG/product-left-bg.svg), url(../images/BG/product-right-bg.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 1% 0, 99% 80%;
+}
+
+div.product div.container h1 {
+    padding: 20px 10px;
+}
+
+div.product div.container div.info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+div.product div.container div.info div.product_img {
+    width: 570px;
+    padding-left: 10px;
+}
+
+
+/* slide  */
+
+ div.product div.product_img .product_slide img {
+    width: 100%;
+    min-width: 430px;
+    height: 380px;
+ } 
+
+ div.product div.product_img .column img {
+    width: 170px;
+    min-width: 140px;
+    height: 113px;
+ } 
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Six columns side by side */
+  .column {
+    width: 33%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  div.product div.product_img div.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 5px;
+  }
+
+  div.product div.container div.info div.product_info,
+  div.product div.container div.info div.hidden {
+    padding: 0 10px 0 30px;
+    position: relative;
+}
+div.product div.container div.info div.hidden {
+    display: none;
+}
+
+div.product_info h6 {
+    display: -ms-grid;
+    display: grid;
+    font-size: 16px;
+    -ms-grid-columns: 320px auto;
+    grid-template-columns: 320px auto;
+    padding-bottom: 23px; 
+    font-weight: 500;
+}
+div.product div.container div.info div.hidden h6 {
+    display: -ms-grid;
+    display: grid;
+    font-size: 16px;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+    padding-bottom: 23px; 
+    font-weight: 500;
+}
+
+div.product_info strong {
+    font-weight: 700;
+}
+
+div.product div.container div.info div.product_info button,
+div.product div.container div.info div.hidden button {
+    background-color: #FCB427;
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* product_info */
+
+
+/* Style the tab */
+div.product .tab {
+    overflow: hidden;
+    padding: 2em 10px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    width: 141px;
+    height: 33px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-right: 50px;
+}
+
+
+/* Change background color of buttons on hover */
+div.product div.container div.tab button:hover {
+    border-bottom: solid 3px #FCB427;
+}
+ div.product div.container h6 {
+    font-weight: 400;
+}
+div.product div.product_info button {
+    background-color: #FCB427;
+}
+/* Create an active/current tablink class */
+div.product .tab button.active {
+    border-bottom: solid 3px #FCB427;
+    font-weight: 700;
+}
+
+/* Style the tab content */
+div.product .tabcontent {
+    display: none;
+    padding: 0 2em;
+}
+
+div.product .tabcontent {
+    -webkit-animation: fadeEffect 1s;
+            animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+div.product div#Description p {
+    padding-bottom: 2em;
+    text-indent: 20px;
+}
+
+div.product div#Description p:nth-child(4) {
+    padding-bottom: 0px;
+}
+
+div.product div#Documentation img {
+    width: 270px;
+    height: 383px;
+    margin: 0px 10px 10px 10px;
+}
+div.product div#Documentation a {
+    text-decoration: none;
+    color: black;
+}
+div.product div#Documentation h6 {
+    font-weight: 700;
+    padding-left: 4em;
+}
+
+
+/* Go from zero to full opacity */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+@media (max-width: 900px) {
+
+    div.product div.container div.info div.product_info{
+        display: none;
+    }
+
+    div.product div.container div.info div.product_img {
+        width: 100%;
+        padding: 0 3px;
+      }
+      div.product div.product_img .product_slide img {
+        height: auto;
+        max-height: 500px;
+      }
+
+      div.product div.container div.info div.hidden {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        row-gap: 10px;
+        -webkit-box-align:center;
+            -ms-flex-align:center;
+                align-items:center;
+    }
+    div.product div.container div.info div.hidden h6 {
+        font-weight: 700;
+    }
+    div.product div.container div.info div.hidden span {
+        padding-right: 10px;
+    }
+    div.product div.container div.info div.hidden button {
+        position: relative;
+    }
+    div.product div.container div.info {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        row-gap: 20px;
+    }
+    div.help__telephone div.container label {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        max-width: 100%;
+      }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    div.product {
+        background-image: none;
+      }
+      div.product div.container div#Characteristics div.product_info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+
+      div.product div.container h1 {
+        font-size: 30px;
+      }
+
+    div.product div.tab button {
+        margin-right: 2px;
+        font-size: 14px;
+        width: auto;
+        height: 30px;
+        padding-right: 4px;
+    }
+    div.product div.tabcontent h6 {
+        font-size: 14px;
+    }
+
+    div.product div.product_img .column img {
+        max-height: 100px;
+        min-width: 75px;
+      }
+
+    div.product div.product_img .product_slide img {
+        min-width: 280px;
+    }
+    div.product .tab {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+      }
+
+      div.product div#Documentation img {
+        margin-left: calc(50% - 135px);
+      }
+      div.product div#Documentation h6 {
+        margin-left: calc(50% - 50px);
+        padding: 0;
+      }
+
+      div.product div.container div#Characteristics div.product_info h6 {
+        -ms-grid-columns: 250px 100px;
+        grid-template-columns: 250px 100px;
+      }
+
+}

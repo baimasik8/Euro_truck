@@ -1,0 +1,836 @@
+
+body {
+  min-width: 330px;
+  background-color: #F3F3F3;
+  scrollbar-color: #333333 #747272; 
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin; 
+  /* толщина для firefox */
+
+  /* адаптация для кроссбаузерности  */
+  font-size: 100%;
+  overflow-x: hidden;
+
+}
+
+textarea{
+        resize: none;
+}
+::-webkit-scrollbar {
+  width: 13px; /* ширина для вертикального скролла */
+  height: 7px; /* высота для горизонтального скролла */
+  background-color: #747272;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #333333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000000;
+}
+
+/* Стрелки */
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  width: 0px;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  width: 0px;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+  width: 0px;
+
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+  width: px;
+
+}
+.container {
+  max-width: 1172px;
+  margin: 0 auto;
+}
+.container a {
+  text-decoration: none;
+}
+div.header {
+  width: 100%;
+  height: 95px;
+  background-color: #2d2d2d;
+  color: #fff;
+}
+div.header div.container.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 95px;
+}
+div.header div.logo {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+div.header div.logo div.img_logo svg {
+  width: 133px;
+  height: 77px;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+div.header div.logo nobr {
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+div.header div.information {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-column-gap: 3em;
+  -webkit-column-gap: 3em;
+          column-gap: 3em;
+}
+div.header div.information div.number {
+  padding-right: 15px;
+}
+div.header div.information li {
+  margin-top: 7px;
+}
+div.header div.information a {
+  text-decoration: none;
+  color: inherit;
+}
+div.header div.information div.information svg {
+  fill: #ffbf1d;
+  width: 21px;
+  height: 21px;
+}
+div.header div.information div.bl1 {
+  display: inline-block;
+  position: relative;
+}
+div.header div.information div.icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -1.5em;
+}
+div.header div.information div.time div.icon {
+  top: -0.15em;
+}
+div.header div.information div.location div.icon {
+  top: 0.3em;
+  left: -2em;
+}
+div.header div.information div.number div.icon {
+  top: 1.8em;
+  left: -2em;
+}
+button.form-at-btn {
+  width: 205px;
+  height: 43px;
+  background-color: #2d2d2d;
+  border-color: #fcd127;
+  cursor: pointer;
+}
+
+button.form-at-btn:hover{
+  -webkit-box-shadow: 1px 1px 15px 2px rgba(255, 191, 29, 0.4);
+          box-shadow: 1px 1px 15px 2px rgba(255, 191, 29, 0.4);
+}
+
+button.form-at-btn:active  {
+  -webkit-box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.15),
+  1px 1px 15px 2px rgba(255, 191, 29, 0.1);
+          box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.15),
+  1px 1px 15px 2px rgba(255, 191, 29, 0.1);
+}
+
+button.form-at-btn h4 {
+  font-size: 18px;
+  color: #fff;
+  white-space: nowrap;
+}
+div.header div.information div.bl1 svg {
+  fill: #fcd127;
+}
+
+
+/* nav  */
+
+div.nav {
+  width: 100%;
+}
+div.nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 76px;
+  padding: 0 1em;
+}
+div.nav .container a.nav-link {
+  text-decoration: none;
+  color: #828282;
+}
+div.nav .container a.nav-link:hover  {
+color: #2D2D2D;
+}
+
+div.nav .container a.nav-link:after {
+  display: block; /*превращаем его в блочный элемент*/
+  content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+  height: 3px; /*задаём высоту линии*/
+  width: 0%; /*задаём начальную ширину элемента (линии)*/
+  background-color: #FCB427; /*цвет фона элемента*/
+  -webkit-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+  }
+
+  div.nav .container a.nav-link:hover:after,
+  div.nav .container a.nav-link:focus:after {
+width: 100%;
+}
+
+div.nav .container .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+div.nav .container .nav-button {
+  border: none;
+  outline: 0;
+  background-color: #F3F3F3;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+div.nav div.search form {
+  position: relative;
+}
+
+div.nav div.search .d7:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+div.nav div.search .d7 form {
+  width: auto;
+  float: right;
+  margin-right: 1em;
+}
+div.nav div.search .d7 input {
+  width: 270px;
+  height: 30px;
+  padding-left: 15px;
+  border: 1px solid #2d2d2d;
+  background: #F3F3F3;
+  outline: 0;
+  -webkit-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  border-color: #cac9c9;;
+}
+div.nav div.search .d7 input:focus {
+  width: 300px;
+  -webkit-box-shadow: 1px 1px 9px 1px #000;
+          box-shadow: 1px 1px 9px 1px #000;
+}
+div.nav div.search .d7 button {
+  width: 15px;
+  height: 15px;
+  background: 0 0;
+  border: none;
+  position: absolute;
+  top: 5px;
+  right: 9px;
+  cursor: pointer;
+}
+div.nav div.search .d7 button:before {
+  content: url(../images/icons/seach.svg);
+  font-family: FontAwesome;
+  color: #324b4e;
+}
+
+/* modal */
+/* The Modal (background) */
+div.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+div.modal .modal-content {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px); 
+  height: 700px;
+  width:  680px;
+  margin: 5vh auto;
+  }
+  
+  div.modal div.text {
+    padding-left: calc(50% - 230px);
+    padding-top: calc(50% - 270px);
+    height: 530px;
+    width:  460px;
+  }
+  div.modal h6{
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 30px 0;
+  }
+  
+  /* The Close Button */
+  div.modal .close{
+    color: #000000;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    padding-right: 9px;
+    cursor: pointer;
+  }
+  
+  div.modal .close:hover,
+  div.modal .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+    color: #3f3f3f;
+  }
+  
+   /* form */
+  
+  div.modal .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    }
+  div.modal input,
+  div.modal select {
+    padding: 5px;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border: 1px solid rgb(0, 0, 0);
+    height: 50px;
+    }
+  div.modal input::-webkit-input-placeholder {
+    color: rgb(0, 0, 0);
+    }
+  div.modal input::-moz-placeholder {
+    color: rgb(0, 0, 0);
+    }
+  div.modal input:-ms-input-placeholder {
+    color: rgb(0, 0, 0);
+    }
+  div.modal input::-ms-input-placeholder {
+    color: rgb(0, 0, 0);
+    }
+  div.modal input::placeholder {
+    color: rgb(0, 0, 0);
+    }
+   div.modal option:focus {
+    border: none;
+    }
+   div.modal option {
+    background: black; 
+    border: none;
+    }
+
+  div.modal .checkbox input {
+    margin: -4px 9px 0 0;
+    vertical-align: middle;
+    }
+  div.modal .checkbox a {
+    color: #2D2D2D;
+    
+    }
+  
+  div.modal .btn-item,
+  div.modal button {
+    padding: 10px 5px;
+    margin-top: 20px;
+    border: none;
+    background: #FCB427; 
+    width: 411px;
+    height: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    }
+   div.modal .btn-item {
+    display: inline-block;
+    margin: 20px 5px 0;
+    }
+  div.modal button {
+    width: 100%;
+    }
+  div.modal button:hover,
+  div.modal .btn-item:hover {
+    cursor: pointer;
+    }
+  
+/* footer */
+
+footer {
+  background: #2D2D2D;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+footer div.container {
+  padding:0 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+footer div.container div.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  vertical-align: baseline;
+
+}
+footer div.container div.row div.footer__logo svg {
+width: 169px;
+height: 91px;
+}
+
+footer div.container div.row div.footer__logo p {
+font-weight: 400;
+font-size: 11px;
+padding-top: 23px;
+}
+footer div.container div.row div.footer__logo b {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 160%;
+  -webkit-font-feature-settings: 'tnum' on, 'lnum' on;
+          font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #B5B5B5;
+  padding-top: 23px;
+  display: block;
+  }
+
+
+  footer div.container h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: #FFFFFF;
+  padding-bottom: 15px;
+  }
+  footer div.container a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+  }
+  footer div.container a:hover {
+    color: #6d6d6d;
+  }
+
+  footer div.container li {
+padding-bottom: 7px;
+  }
+
+  footer div.container .form-at-btn {
+    display: block;
+    position: static;
+    width: 170px;
+    height: 43px;
+    background-color:#FFFFFF;
+    border-color: #2D2D2D;
+    margin-bottom: 22px;
+  }
+  footer div.container .form-at-btn h4 {
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+
+  }
+  footer div.container .footer__actions ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+  }
+  footer div.container .footer__contacts a {
+    font-weight: 500;
+  font-size: 14px;
+  }
+
+  
+/* help__telephone */
+
+div.help__telephone {
+  padding-top: 120px;
+  padding-bottom: 165px;
+  background-color: #f4f4f4;
+  background-image: url(../images/BG/yellow__line_bg.jpg), url(../images/BG/yellow__line_bg.jpg), url(../images/BG/machine_bg.png);
+  background-position: 0 0, 0 100%, 50% calc(100% - 45px);
+  background-repeat: repeat-x, repeat-x, no-repeat;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-bottom: 20px;
+}
+
+div.help__telephone div.container {
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.help__telephone div.container div.row {
+  padding: 63px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.help__telephone div.container label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  max-width: 460px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.help__telephone div.container label div.input {
+  margin-right: 15px;
+}
+
+div.help__telephone div.container label span {
+  color: #474646;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+div.help__telephone div.container div.row input {
+  margin-right: 30px;
+  height: 50px;
+  padding: 0 0 0 20px;
+  width: 100%;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: #FFFFFF;
+  border: 1px solid #535554;
+}
+
+div.help__telephone div.container div.row input:focus-visible {
+  border: 2px solid #FCB427;
+}
+div.help__telephone div.container div.row button.form-at-btn {
+  background: #FCB427;;
+  color: #fff;
+  width: 370px;
+  max-width: none;
+  padding: 0 20px;
+}
+div.help__telephone div.container div.row button.form-at-btn  h6 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+button.btn-up {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 10px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(252, 180, 39, 0.1); /* Set a background color */
+  color: black; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 5px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 35px; /* Increase font size */
+  width: 57px;
+
+}
+
+button.btn-up:hover {
+background-color: rgba(252, 180, 39, 0.6);
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+  
+  
+@media (max-width: 1080px) {
+  div.header div.information div.button,
+  div.header div.information div.location,
+  div.header div.information div.time {
+    display: none;
+  }
+  div.header div.information div.number {
+    padding-right: 15px;
+  }
+  div.nav div.container nav.nav {
+    position: relative;
+    z-index: 10;
+  }
+  div.nav div.container nav.nav .nav-list {
+    display: none;
+  }
+  div.nav div.container nav.nav .nav-button {
+    display: block;
+  }
+  div.nav div.container nav.nav .nav-link {
+    color: #828282;
+  }
+  div.nav div.container nav.nav .nav-link:hover {
+    color: #000;
+  }
+  div.nav div.container nav.nav .nav-button {
+    position: absolute;
+    z-index: 9;
+    top: -20px;
+  }
+  div.nav div.container nav.nav .nav.open .nav-button {
+    position: fixed;
+  }
+  div.nav div.container nav.open .nav-list {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F3F3F3;
+
+    z-index: 1;
+    padding: 46px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 40px;
+
+    font-size: 34px;
+    font-weight: 600;
+
+  }
+
+  div.nav div.container nav.open .nav-button{
+    position: fixed;
+    top: 35px;
+    right: 35px;
+  }
+  div.nav div.search .d7 input {
+    border-color: #2D2D2D;
+    opacity: 0.6;
+
+  }
+  div.nav .container a.nav-link:hover:after,
+  div.nav .container a.nav-link:focus:after {
+  width: 230px;
+  }
+
+  
+  /* footer  */
+ 
+  footer div.container div.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    vertical-align: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    vertical-align: baseline;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    row-gap: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: relative;
+  }
+  footer div.container div.row div.footer__logo b {
+    position: absolute;
+    right: calc(50% - 93px);
+    bottom: -10%;
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 900px){
+  
+    /* help__telephone */
+    div.help__telephone div.container div.row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      row-gap: 25px;
+    }
+    div.help__telephone div.container div.row input {
+      width: 70%;
+      margin-right: 0;
+    }
+}
+
+
+@media (max-width: 700px) {
+      /* Modal Content */
+      div.modal .modal-content {
+        width:  570px;
+        }
+}
+
+
+@media (max-width: 600px) {
+  div.header {
+    display: block;
+    height: 238px;
+  }
+  div.header div.container.head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 40px;
+  }
+  div.header div.container.head div.logo {
+    padding-top: 2em;
+  }
+  div.header div.container.head div.logo div.img_logo img {
+    width: 150px;
+    height: 90px;
+    padding-right: 1em;
+  }
+  div.header div.container.head div.logo div nobr {
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #fff;
+  }
+  div.nav div.search .d7 input {
+    width: 130px;
+    }
+    div.nav div.search .d7 input:focus {
+        width: 200px; }
+
+  footer div.container div.row div.footer__logo b {
+    bottom: -5%;
+  }
+
+  /* help__telephone */
+  div.help__telephone div.container div.row input {
+    width: 85%;
+  }
+
+  div.help__telephone div.container div.row button.form-at-btn {
+    width: 70%;
+    padding: 0 10px;
+  }
+   
+  div.modal div.text {
+    padding: 2em 0;
+    margin: 0 2em;
+    height: 500px;
+    max-width:  350px;
+  }
+
+  div.modal .close {
+    padding-right: 190px;
+    padding-top: 29px;
+  }
+}

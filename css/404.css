@@ -1,0 +1,87 @@
+
+body {
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+ }
+ 
+ 
+ 
+ 
+ div.not_found {
+   position: absolute;
+   left: 0;
+   top: 171px;
+   width: 100%;
+   height: calc(100% - 171px); 
+   min-height: 400px;   
+ background:
+  url(../images/BG/bg_for_banner.jpg) repeat-x,
+ url(../images/BG/bg_for_banner.jpg) -20px 100% repeat-x,
+ url(../images/BG/bg_crane.png) 100% 43px no-repeat #292929;
+ color: #989898;
+ }
+ 
+ div.not_found div.text {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+   height: 90%;
+   width: 50%;
+   padding: 10px 30px;
+ 
+ }
+ 
+ div.not_found h1{
+   font-family: Montserrat, sans-serif;
+   font-weight: 700;
+   font-size: 130px;
+   color: #FCB427;
+   padding-bottom: 2rem;
+ }
+ 
+ 
+ div.not_found div.text h2{
+   font-family: Montserrat, sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+   padding-bottom: 1rem;
+ }
+ 
+ div.not_found div.text h3{
+   font-family: Montserrat, sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+ }
+  
+ 
+ @media (max-width: 900px) {
+   div.not_found { 
+     background:
+     url(../images/BG/bg_for_banner.jpg) repeat-x,
+    url(../images/BG/bg_for_banner.jpg) -20px 100% repeat-x,
+    url(../images/BG/bg_crane.png) 100px 43px no-repeat #292929;
+   }
+ 
+ } 
+ 
+ @media (max-width: 600px) {
+   div.not_found { 
+     top: 314px;
+     height: calc(100% - 314px);  
+      }
+   div.not_found div.text {
+     width: 80%;
+   } 
+ } 

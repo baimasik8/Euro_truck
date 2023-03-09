@@ -1,0 +1,636 @@
+
+div.nav .container ul li:first-of-type a.nav-link::after {
+    display: block; /*превращаем его в блочный элемент*/
+    content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+    height: 3px; /*задаём высоту линии*/
+    width: 0%; /*задаём начальную ширину элемента (линии)*/
+    background-color: #FCB427; /*цвет фона элемента*/
+    -webkit-transition: width 0.4s ease-in-out;
+    -o-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+    width: 100%;
+}
+div.nav .container ul li:first-of-type a.nav-link {
+    color: #181818;
+  }
+
+div.breadcrumb {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 15px;
+}
+div.breadcrumb div.container {
+    padding: 0 1em;
+}
+div.breadcrumb div.bx-breadcrumb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+}
+
+div.breadcrumb div.bx-breadcrumb a {
+    text-decoration: none;
+    color: #181818;
+}
+
+div.breadcrumb div.bx-breadcrumb span {
+    color: #828282;
+    cursor: default;
+}
+
+div.catalog {
+    padding: 0 15px;
+    background-image: url(../images/BG/product-left-bg.svg), url(../images/BG/product-right-bg.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 5% 90%, 95% 10%;
+}
+
+div.catalog h1 {
+    padding: 40px 0 15px 0;
+}
+
+div.catalog div.mass_filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; 
+}
+
+div.catalog div.mass_filter button {
+    width: 114px;
+    height: 33px;
+    border: 1px solid rgba(255, 191, 29, 0.27);
+    cursor: pointer;
+    background-color: #F3F3F3;
+}
+
+div.catalog div.mass_filter button:hover {
+    border: 2px solid rgba(255, 191, 30, 0.3);
+}
+
+
+/* sidebar */
+
+div.catalog div.main__catalog {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 271px 30px 1fr;
+    grid-template-columns: 271px 1fr;
+    grid-gap: 30px;
+}
+div.catalog div.main__catalog div.section__park {
+    color: white;
+    margin: 50px 0;
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+div.catalog div.main__catalog div.section__park div.sidebar__title {
+    height: 56px;
+    background: #2D2D2D;
+    height: 56px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.catalog div.main__catalog div.section__park div.sidebar__item {
+    background: #fbfbfb;
+    padding: 30px 25px 30px 35px;
+}
+div.catalog div.main__catalog div.section__park div.sidebar__item button {
+    position: relative;
+    padding-right: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2D2D2D;
+    border: 0;
+    background-color: #fbfbfb;
+    cursor: pointer;
+    width: 200px;
+}
+
+div.catalog div.main__catalog div.section__park div.sidebar__item button.accordion::after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div.catalog div.main__catalog div.section__park div.sidebar__item  .panel {
+    padding: 10px 18px;
+    background-color: #fbfbfb;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    -o-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+    color:#2D2D2D;
+}
+
+div.catalog div.main__catalog div.section__park div.sidebar__item button.active:after {
+    content: "\2212";
+}
+div.catalog div.main__catalog div.section__park div.sidebar__item  .panel ul li {
+    padding-bottom: 10px;
+}
+
+div.catalog div.main__catalog div.section__park div.sidebar__item  .panel ul li a {
+    text-decoration: none;
+    color: #474646;
+    font-weight: 400;
+    font-size: 12px;
+}
+div.catalog div.main__catalog div.section__park div.sidebar__item  .panel ul li a:hover {
+    color: black;
+}
+
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content {
+    color:#2D2D2D;
+}
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content h6{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content input[type="checkbox"] {
+    margin: 5px 4px;
+}
+
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content input.largerCheckbox {
+    width: 40px;
+    height: 40px;
+}
+
+div.catalog div.main__catalog div.section__park div.seach {
+    margin-top: 50px;
+}
+
+
+div.catalog div.main__catalog div.section__park div.seach .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+div.catalog div.main__catalog div.section__park div.seach .slider:hover {
+    opacity: 1;
+}
+
+div.catalog div.main__catalog div.section__park div.seach .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 19px;
+    height: 6px;
+    background: #FCB427;
+    cursor: pointer;
+    border-radius: 1px;
+}
+
+div.catalog div.main__catalog div.section__park div.seach .slider::-moz-range-thumb {
+    width: 19px;
+    height: 6px;
+    background: #FCB427;
+    cursor: pointer;
+    border-radius: 1px;
+}
+
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content div.segment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 15px;
+
+}
+
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content p.from,
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content p.to {
+    width: 84px;
+    height: 22px;
+    opacity: 0.84;
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 1px solid #535554;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+}
+div.catalog div.main__catalog div.section__park div.seach button.disabled {
+    color: #C4C4C4;
+    font-weight: 400;
+    font-size: 16px;
+    padding-right: 0;
+    height: 40px;
+}
+div.catalog div.main__catalog div.section__park div.seach button.disabled::after{
+    content:'';
+}
+div.catalog div.main__catalog div.section__park div.seach button.show {
+    width: 198px;
+    height: 50px;
+    background-color: #2D2D2D;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0;
+}
+div.catalog div.main__catalog div.section__park div.seach button.show:hover,
+div.catalog div.main__catalog div.section__park div.seach button.show:active {   
+    -webkit-box-shadow: 6px 6px 5px  rgb(0, 0, 0, 0.25);   
+            box-shadow: 6px 6px 5px  rgb(0, 0, 0, 0.25);
+}
+div.catalog div.main__catalog div.section__park div.seach button.show h6 {
+   color: white;
+   font-family: 'PT Sans', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0;
+}
+
+/* slide__bar */
+
+/** FF*/
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content input[type="range"]::-moz-range-progress {
+  background-color: #FCB427;
+}
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content input[type="range"]::-moz-range-track {  
+  background-color: #C4C4C4;
+}
+/* IE*/
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content input[type="range"]::-ms-fill-lower {
+  background-color: #FCB427;
+}
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content input[type="range"]::-ms-fill-upper {  
+  background-color: #C4C4C4;
+}
+/* slide__bar end*/
+
+
+div.catalog div.main__catalog div.section__park div.seach div.sidebar__content button {
+    margin: 10px 0 ;
+}
+
+
+/* content */
+
+div.catalog div.container div.main__catalog div.content {
+    padding-top: 50px;
+}
+
+div.catalog div.container div.main__catalog div.content div.filter {
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+}
+div.catalog div.container div.main__catalog div.content div.filter svg {
+    cursor: pointer;
+}
+div.catalog div.container div.main__catalog div.content div.filter svg:hover > rect {
+    fill: black;
+}
+div.catalog div.container div.main__catalog  div.filter-btn {
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #535554;
+    opacity: 0.7;
+    padding: 10px;
+    margin-left: -15px;
+    margin-top: 45px;
+    cursor: pointer;
+    width: 61px;
+    height: 44px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: none;
+}
+div.catalog div.container div.main__catalog div.filter-btn svg {
+    padding-left: 10px;
+}
+
+
+
+
+
+div.catalog div.container div.main__catalog div.content div.cars__items{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    padding-bottom: 20px;
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.cars__card {
+    background: #fff;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    min-width: 255px;
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.img {
+    background-size: cover;
+    height: 218px;
+
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.cars__card:nth-child(1) div.img {
+    background-image: url(../images/machines/catalog/LTM_1750.jpg)
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.cars__card:nth-child(2) div.img {
+    background-image: url(../images/machines/catalog/LTM_1050.jpg)
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.cars__card:nth-child(3) div.img {
+    background-image: url(../images/machines/catalog/LTM_1070.jpg)
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.cars__card:nth-child(4) div.img {
+    background-image: url(../images/machines/catalog/LTM_1100.jpg)
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.cars__card:nth-child(5) div.img {
+    background-image: url(../images/machines/catalog/LTM_1160.jpg)
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.cars__card:nth-child(6) div.img {
+    background-image: url(../images/machines/catalog/LTM_1250.jpg)
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.cars__card:nth-child(7) div.img {
+    background-image: url(../images/machines/catalog/LTM_1350.jpg)
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.cars__card:nth-child(8) div.img {
+    background-image: url(../images/machines/catalog/LTR_1220.jpg)
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.cars__card:nth-child(9) div.img {
+    background-image: url(../images/machines/catalog/SСС_1800.jpg)
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.card__title {
+    min-height: 81px;
+    text-align: center;
+    font-weight: 700;
+    border-bottom: 2px solid #FCD12745;
+    background-image: url(../images/icons/Vector.svg), url(../images/icons/Vector.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: -1px 0, calc(100% + 1px) 0;
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.card__title h6{
+    padding-top: 2em;
+}
+
+div.catalog div.container div.main__catalog div.content div.cars__items div.card__info {
+    padding: 25px;
+}
+
+div.catalog div.container div.main__catalog div.content div.cars__items div.card__info h6 {
+    font-weight: 400;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 12px;
+}
+
+div.catalog div.container div.main__catalog div.content div.cars__items div.card__info h6 span:first-child {
+    min-width: 30%;
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.card__info h6 span:last-child {
+    min-width: 1%;
+}
+
+div.catalog div.container div.main__catalog div.content div.cars__items div.card__info h6:last-child {
+    font-weight: 700;
+    display: block;
+}
+div.catalog div.container div.main__catalog  a{
+    color: black;
+}
+div.catalog div.container div.main__catalog div.content div.cars__items div.card__info h6:last-child svg {
+    padding-left: 15px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+div.catalog div.container div.main__catalog div.content div.cars__items div.card__info h6:last-child:hover svg {
+    -webkit-transform: translateX(-15px);
+        -ms-transform: translateX(-15px);
+            transform: translateX(-15px)
+}
+
+div.catalog div.container div.main__catalog div.content div.cars__items div.card__info button {
+    background-color: #FCB427;
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+
+/* pagination */
+
+/* Pagination links */
+div.catalog div.container div.main__catalog div.content .pagination a.number {
+    color: #C4C4C4;
+    float: left;
+    width: 22px;
+    height: 23px;
+    border: 1px solid #C4C4C4;
+    -webkit-box-sizing:border-box;
+            box-sizing:border-box;
+    margin: 0 10px;
+    text-align: center;
+    padding-top: 1px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+div.catalog div.container div.main__catalog div.content .pagination a.active {
+    border: 1px solid #FCB427;
+    width: 28px;
+    height: 32px;
+    color: black;
+    text-align: center;
+    padding-top: 5px;
+}
+
+div.catalog div.container div.main__catalog div.content .pagination a.number:not(.active):hover {
+    border: 1px solid #FCB427;
+    -webkit-box-sizing:border-box;
+            box-sizing:border-box;
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px)
+}
+
+div.catalog div.container div.main__catalog div.content ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align:end;
+        -ms-flex-align:end;
+            align-items:flex-end;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+}
+div.catalog div.container div.main__catalog div.content .pagination svg{
+    padding-bottom: 5px;
+}
+
+div.catalog div.container div.main__catalog div.content .pagination ul li:last-child {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+div.catalog div.container div.main__catalog div.content .pagination ul li:last-child:hover{
+    -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+            transform: translateX(10px)
+}
+
+div.catalog div.container div.main__catalog div.content div.pagination{
+    margin: 50px 0;
+}
+
+
+
+@media screen and (max-width: 1150px){
+    div.catalog div.container div.main__catalog div.content div.cars__items{
+        -ms-grid-columns: 1fr 30px 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+}
+
+
+
+@media screen and (max-width: 900px){
+    div.catalog div.container div.main__catalog div.content div.cars__items{
+        -ms-grid-columns: 1fr 30px 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    div.catalog div.container div.main__catalog  div.filter-btn { 
+        display: block;
+    }
+    div.catalog div.container div.main__catalog  div.filter-btn:hover { 
+        opacity: 1;
+    }
+    div.catalog div.main__catalog div.section__park {
+        display: none;
+    }
+    div.catalog div.main__catalog {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    div.catalog div.container div.main__catalog div.content {
+        padding-top: 0;
+      }
+      div.catalog div.mass_filter button:nth-child(n+18):not(div.catalog div.mass_filter button:nth-child(26)) {
+        display: none;
+      }
+
+    div.help__telephone div.container label {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        max-width: 100%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 600px){ 
+    div.catalog div.container div.main__catalog div.content div.cars__items{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    div.catalog {
+        padding: 0 5px;
+    }
+    div.catalog div.mass_filter {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+      }
+}
+
+
+/* slide__bar */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    div.catalog div.main__catalog div.section__park div.seach div.sidebar__content   input[type='range'] {
+      -webkit-appearance: none;
+      background-color: #FCB427;
+    }
+    
+    div.catalog div.main__catalog div.section__park div.seach div.sidebar__content  input[type='range']::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      color: #C4C4C4;
+      margin-top: -1px;
+    }
+    
+    div.catalog div.main__catalog div.section__park div.seach div.sidebar__content input[type='range']::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      cursor: ew-resize;
+      background: #FCB427;
+    }
+
+}
